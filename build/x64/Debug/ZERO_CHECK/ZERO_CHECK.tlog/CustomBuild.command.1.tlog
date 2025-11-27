@@ -1,6 +1,6 @@
 ^C:\USERS\USER\DESKTOP\CSAD2526KI404LITVINENKOANTONANDREYOVYCH16\BUILD\CMAKEFILES\5270976754DC13C40EA91916EF62B36B\GENERATE.STAMP.RULE
 setlocal
-D:\bin\cmake.exe -SC:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16 -BC:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/MathOperationsTests.sln
+D:\bin\cmake.exe -SC:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16 -BC:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/MathOperations.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

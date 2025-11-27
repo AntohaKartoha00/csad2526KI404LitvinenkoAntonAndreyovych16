@@ -1,4 +1,7 @@
 C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/CMakeFiles/math_operations.dir
+C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/CMakeFiles/test_app.dir
 C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/CMakeFiles/unit_tests.dir
+C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/CMakeFiles/run_tests.dir
+C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/CMakeFiles/RUN_TESTS.dir
 C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/CMakeFiles/ZERO_CHECK.dir
