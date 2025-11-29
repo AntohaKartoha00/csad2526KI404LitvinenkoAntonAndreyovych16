@@ -115,7 +115,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=MathOperationsTests
+CMAKE_PROJECT_NAME:STATIC=MathOperations
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -205,6 +205,15 @@ MathOperationsTests_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 MathOperationsTests_SOURCE_DIR:STATIC=C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16
+
+//Value Computed by CMake
+MathOperations_BINARY_DIR:STATIC=C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build
+
+//Value Computed by CMake
+MathOperations_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+MathOperations_SOURCE_DIR:STATIC=C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16
 
 //Value Computed by CMake
 MyProject_BINARY_DIR:STATIC=C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build
@@ -331,6 +340,12 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=D:/Microsoft Visual Studio/2022Community
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
+//Have library pthreads
+CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
+//Have library pthread
+CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16
@@ -401,6 +416,8 @@ CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding GTest
 FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[C:/Users/User/vcpkg/installed/x64-windows/share/gtest/GTestConfig.cmake][ ][v1.17.0()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Install the dependencies listed in your manifest:
 //\n    If this is off, you will have to manually install your dependencies.
 //\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md
