@@ -1,9 +1,21 @@
 cmake_minimum_required(VERSION 3.14)
 project(MathOperations)
 
+# Clean configuration
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "" FORCE)
+
+# Delete cached variables that might cause issues
+unset(CMAKE_PREFIX_PATH CACHE)
+unset(CMAKE_INCLUDE_PATH CACHE)
+unset(CMAKE_LIBRARY_PATH CACHE)
+
 # Enable C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Вимкнути кешування шляхів, що викликає проблеми
+set(CMAKE_SKIP_RPATH OFF)
+set(CMAKE_SKIP_BUILD_RPATH OFF)
 
 # Include Threads
 find_package(Threads REQUIRED)

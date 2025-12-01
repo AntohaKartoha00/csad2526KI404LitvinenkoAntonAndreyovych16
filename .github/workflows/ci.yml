@@ -1,3 +1,5 @@
+name: Cross-platform Build
+
 on:
   push:
     branches: ['develop', 'master']
@@ -10,32 +12,59 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+        with:
+          lfs: false
+          submodules: recursive
+          
       - name: Setup CMake
         uses: jwlawson/actions-setup-cmake@v2.0.0
-
-      - name: Prepare scripts
-        if: runner.os == 'Linux' || runner.os == 'macOS'
-        run: chmod +x ci.sh
-        shell: bash
-
+        with:
+          cmake-version: '3.27'
+        
+      - name: Fix script permissions and line endings
+        run: |
+          if [ "${{ runner.os }}" == "Windows" ]; then
+            # Для Windows перевіряємо наявність скрипту
+            if [ -f "ci.bat" ]; then
+              echo "Windows script found"
+            else
+              echo "Warning: ci.bat not found"
+            fi
+          else
+            # Для Linux/macOS даємо права на виконання
+            if [ -f "ci.sh" ]; then
+              chmod +x ci.sh
+              # Конвертуємо роздільники, якщо потрібно
+              dos2unix ci.sh 2>/dev/null || true
+            else
+              echo "Warning: ci.sh not found"
+            fi
+          fi
+        
+      - name: Clean previous build
+        run: |
+          if [ "${{ runner.os }}" == "Windows" ]; then
+            if exist build rmdir /s /q build
+          else
+            rm -rf build
+          fi
+        
       - name: Build and Test (Linux/macOS)
         if: runner.os == 'Linux' || runner.os == 'macOS'
         run: ./ci.sh
-        shell: bash
-
+        
       - name: Build and Test (Windows)
         if: runner.os == 'Windows'
-        run: .\ci.bat
-        shell: cmd
-
+        run: ci.bat
+        
       - name: Build Success Message
         if: success()
         run: echo "✅ Build succeeded"
-
+        
       - name: Upload build artifacts
         if: success()
         uses: actions/upload-artifact@v4

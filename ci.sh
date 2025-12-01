@@ -6,13 +6,15 @@ set -e  # Зупинятися при помилці
 
 echo "Початок CI: конфігурація та білд проекту..."
 
-# Створюємо каталог build, якщо він не існує
-if [ ! -d "build" ]; then
-    mkdir build
-    echo "Каталог 'build' створено."
-else
-    echo "Каталог 'build' вже існує."
+# Видаляємо старий каталог build
+if [ -d "build" ]; then
+    echo "Видалення старого каталогу 'build'..."
+    rm -rf build
 fi
+
+# Створюємо новий каталог build
+mkdir build
+echo "Каталог 'build' створено."
 
 # Переходимо в каталог build
 cd build
