@@ -1,9 +1,22 @@
 cmake_minimum_required(VERSION 3.14)
 project(MathOperations)
 
+# Clean configuration
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "" FORCE)
+
+# Delete cached variables that might cause issues
+unset(CMAKE_PREFIX_PATH CACHE)
+unset(CMAKE_INCLUDE_PATH CACHE)
+unset(CMAKE_LIBRARY_PATH CACHE)
+
 # Enable C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# CRITICAL FIX: Force GoogleTest to use dynamic runtime on Windows
+if(MSVC)
+    set(gtest_force_shared_crt ON CACHE BOOL "Use shared (DLL) run-time lib even when Google Test is built as static lib." FORCE)
+endif()
 
 # Include Threads
 find_package(Threads REQUIRED)
@@ -15,15 +28,19 @@ if (NOT GTest_FOUND)
     FetchContent_Declare(
         googletest
         URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
     )
     FetchContent_MakeAvailable(googletest)
-endif ()
+endif()
 
 # Add static library for math_operations
 add_library(math_operations STATIC
     math_operations.cpp
     math_operations.h
 )
+
+# Make headers accessible
+target_include_directories(math_operations PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Add executable for the main application
 add_executable(test_app
@@ -39,7 +56,12 @@ add_executable(unit_tests
 )
 
 # Link math_operations, GTest, and Threads to unit_tests
-target_link_libraries(unit_tests PRIVATE math_operations GTest::gtest GTest::gtest_main Threads::Threads)
+target_link_libraries(unit_tests PRIVATE 
+    math_operations 
+    GTest::gtest 
+    GTest::gtest_main 
+    Threads::Threads
+)
 
 # Enable testing
 enable_testing()

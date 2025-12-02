@@ -1,10 +1,10 @@
-Start testing: Nov 29 14:45 Финляндия (зима)
+Start testing: Dec 02 03:44 Финляндия (зима)
 ----------------------------------------------------------
 1/1 Testing: UnitTests
 1/1 Test: UnitTests
 Command: "C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build/Debug/unit_tests.exe"
 Directory: C:/Users/User/Desktop/csad2526KI404LitvinenkoAntonAndreyovych16/build
-"UnitTests" start time: Nov 29 14:45 Финляндия (зима)
+"UnitTests" start time: Dec 02 03:44 Финляндия (зима)
 Output:
 ----------------------------------------------------------
 [==========] Running 4 tests from 1 test suite.
@@ -24,11 +24,11 @@ Output:
 [==========] 4 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 4 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"UnitTests" end time: Nov 29 14:45 Финляндия (зима)
+"UnitTests" end time: Dec 02 03:44 Финляндия (зима)
 "UnitTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 29 14:45 Финляндия (зима)
+End testing: Dec 02 03:44 Финляндия (зима)

@@ -1,4 +1,4 @@
-#include "C:\Users\User\Desktop\csad2526KI404LitvinenkoAntonAndreyovych16\math_operations.h"
+#include "../math_operations.h"
 #include <gtest/gtest.h>
 
 // Тест для додавання двох позитивних чисел
