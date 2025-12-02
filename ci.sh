@@ -1,22 +1,17 @@
 #!/bin/bash
-
 # CI скрипт для локального білду C++ проекту з CMake
-
-set -e  # Зупинятися при помилці
-
+set -e # Зупинятися при помилці
 echo "Початок CI: конфігурація та білд проекту..."
-
-# Створюємо каталог build, якщо він не існує
-if [ ! -d "build" ]; then
-    mkdir build
-    echo "Каталог 'build' створено."
-else
-    echo "Каталог 'build' вже існує."
+# Видаляємо старий каталог build
+if [ -d "build" ]; then
+    echo "Видалення старого каталогу 'build'..."
+    rm -rf build
 fi
-
+# Створюємо новий каталог build
+mkdir build
+echo "Каталог 'build' створено."
 # Переходимо в каталог build
 cd build
-
 # Конфігурація проекту
 echo "Конфігурація з cmake .."
 if cmake ..; then
@@ -25,7 +20,6 @@ else
     echo "Конфігурація невдала!"
     exit 1
 fi
-
 # Збірка проекту
 echo "Збірка з cmake --build ."
 if cmake --build .; then
@@ -34,7 +28,6 @@ else
     echo "Білд невдалий!"
     exit 1
 fi
-
 # Запуск тестів
 echo "Запуск тестів з ctest."
 if ctest; then
@@ -43,5 +36,4 @@ else
     echo "Тести не пройдено!"
     exit 1
 fi
-
 echo "CI завершено успішно!"

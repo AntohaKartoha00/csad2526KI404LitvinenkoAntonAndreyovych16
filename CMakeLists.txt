@@ -20,7 +20,6 @@ endif()
 
 # Include Threads
 find_package(Threads REQUIRED)
-
 # Find or fetch Google Test
 find_package(GTest QUIET)
 if (NOT GTest_FOUND)
@@ -46,15 +45,12 @@ target_include_directories(math_operations PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(test_app
     main.cpp
 )
-
 # Link math_operations to the main application
 target_link_libraries(test_app PRIVATE math_operations)
-
 # Add unit test target
 add_executable(unit_tests
     tests/unit_tests.cpp
 )
-
 # Link math_operations, GTest, and Threads to unit_tests
 target_link_libraries(unit_tests PRIVATE 
     math_operations 
@@ -65,12 +61,11 @@ target_link_libraries(unit_tests PRIVATE
 
 # Enable testing
 enable_testing()
-
 # Register the unit tests
 add_test(NAME UnitTests COMMAND unit_tests)
-
 # Add a custom target to run tests
 add_custom_target(run_tests
     COMMAND ctest -C $<CONFIG> --output-on-failure
     DEPENDS unit_tests
 )
+# Примітка: Якщо потрібен vcpkg, додай: vcpkg integrate install (локально) або інтегруй у CI
