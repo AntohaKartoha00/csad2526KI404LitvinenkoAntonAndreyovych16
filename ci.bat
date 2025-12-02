@@ -31,7 +31,7 @@ if %errorlevel% neq 0 (
 echo Білд успішний.
 REM Запуск тестів
 echo Запуск тестів з ctest.
-ctest
+ctest -C Debug
 if %errorlevel% neq 0 (
     echo Тести не пройдено!
     echo FAILED
