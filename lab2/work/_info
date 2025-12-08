@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA/18.1
+vbaud_gen
+Z0 !s110 1764834537
+!i10b 1
+!s100 8WVaz_UEA7;SQSE9>eLc[0
+IWzBi6BG@PV20L^<S5k7Yz1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/UART_LAB2
+w1764801093
+8D:/UART/baud_gen.v
+FD:/UART/baud_gen.v
+L0 6
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1764834537.000000
+!s107 D:/UART/baud_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/baud_gen.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vuart_rx
+R0
+!i10b 1
+!s100 iaFgfAj5Zh357fRI1j9B@2
+ImGc7D4VzPAWcd_LJ7=ln_0
+R1
+R2
+w1764829420
+8D:/UART/uart_rx.v
+FD:/UART/uart_rx.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/UART/uart_rx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/uart_rx.v|
+!i113 1
+R5
+R6
+vuart_tb
+R0
+!i10b 1
+!s100 `=<1l0O@zPzLiW5a3jbML3
+I<W2zLH?ieVzfPGK[eZb<D1
+R1
+R2
+w1764829430
+8D:/UART/uart_tb.v
+FD:/UART/uart_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/UART/uart_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/uart_tb.v|
+!i113 1
+R5
+R6
+vuart_tx
+!s110 1764834538
+!i10b 1
+!s100 L45b]k1e[Lc::ERP6F@>30
+IOK_?ERCV1[f36[Poz1<ZF3
+R1
+R2
+w1764801126
+8D:/UART/uart_tx.v
+FD:/UART/uart_tx.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/UART/uart_tx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/uart_tx.v|
+!i113 1
+R5
+R6

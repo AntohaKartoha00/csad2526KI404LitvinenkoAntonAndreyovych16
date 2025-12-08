@@ -1,0 +1,29 @@
+D:/UART/baud_gen.v {1 {vlog -work work -stats=none D:/UART/baud_gen.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module baud_gen
+
+Top level modules:
+	baud_gen
+
+} {} {}} D:/UART/uart_rx.v {1 {vlog -work work -stats=none D:/UART/uart_rx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_rx
+
+Top level modules:
+	uart_rx
+
+} {} {}} D:/UART/uart_tb.v {1 {vlog -work work -stats=none D:/UART/uart_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_tb
+
+Top level modules:
+	uart_tb
+
+} {} {}} D:/UART/uart_tx.v {1 {vlog -work work -stats=none D:/UART/uart_tx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_tx
+
+Top level modules:
+	uart_tx
+
+} {} {}}
